@@ -1,0 +1,30 @@
+{
+  "name": "elasticsearch-node-3",
+  "config": {
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "tasks.max": "5",
+    "topics": "node-3",
+    "key.ignore": "true",
+    "schema.ignore": "true",
+    "connection.url": "http://192.168.125.174:9200,http://192.168.125.173:9200,http://192.168.125.172:9200",
+    "type.name": "node-3:_doc",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false",
+    "transforms": "null_key,null_value",
+    "bulk.flush.max.actions": "5000",
+    "bulk.flush.interval.ms": "60000",
+    "connection.pool.size": "10",
+    "errors.log.enable": "true",
+    "errors.log.include.messages": "true",
+    "errors.retry.timeout": "30000",
+    "errors.retry.delay.max.ms": "30000",
+    "errors.tolerance": "all",
+    "transforms.null_key.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
+    "transforms.null_key.replacement": "null",
+    "transforms.null_value.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
+    "transforms.null_value.replacement": "null"
+  }
+}
+
