@@ -1,0 +1,37 @@
+# Bootstrap servers to connect to Kafka brokers
+bootstrap.servers=192.168.125.172:9092,192.168.125.173:9092,192.168.125.174:9092
+#,192.168.125.172:9092
+#192.168.125.157:9092,192.168.125.159:9092,192.168.125.158:9092
+
+# Kafka Connect converters for data format and translation
+key.converter=org.apache.kafka.connect.json.JsonConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+
+# General settings
+tasks.max=10
+key.converter.schemas.enable=false
+value.converter.schemas.enable=false
+group.id=node-3.group
+
+# Offset storage configuration
+offset.storage.topic=nginx-stat_offset
+config.storage.topic=nginx_storage
+status.storage.topic=nginx_status_topic
+
+# Flush interval for offset commits (in milliseconds)
+offset.flush.interval.ms=60000
+
+# Plugin path for connectors, converters, and transformations
+plugin.path=/usr/share/java,/usr/share/confluent-hub-components
+
+
+#additional setting
+
+fetch.max.wait.ms=500
+session.timeout.ms=30000
+
+producer.batch.size=16384
+producer.linger.ms=5
+
+# Uncomment the line below for debugging purposes
+log4j.logger.org.apache.kafka.connect=DEBUG
