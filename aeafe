@@ -1,0 +1,62 @@
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic testTopic1
+Error: JMX connector server communication error: service:jmx:rmi://kafka1:9999
+jdk.internal.agent.AgentConfigurationError: java.rmi.server.ExportException: Port already in use: 9999; nested exception is:
+        java.net.BindException: Address already in use (Bind failed)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap.exportMBeanServer(ConnectorBootstrap.java:820)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap.startRemoteConnectorServer(ConnectorBootstrap.java:479)
+        at jdk.management.agent/jdk.internal.agent.Agent.startAgent(Agent.java:447)
+        at jdk.management.agent/jdk.internal.agent.Agent.startAgent(Agent.java:599)
+Caused by: java.rmi.server.ExportException: Port already in use: 9999; nested exception is:
+        java.net.BindException: Address already in use (Bind failed)
+        at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:335)
+        at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:243)
+        at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:412)
+        at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+        at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:234)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap$PermanentExporter.exportObject(ConnectorBootstrap.java:203)
+        at java.management.rmi/javax.management.remote.rmi.RMIJRMPServerImpl.export(RMIJRMPServerImpl.java:153)
+        at java.management.rmi/javax.management.remote.rmi.RMIJRMPServerImpl.export(RMIJRMPServerImpl.java:138)
+        at java.management.rmi/javax.management.remote.rmi.RMIConnectorServer.start(RMIConnectorServer.java:473)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap.exportMBeanServer(ConnectorBootstrap.java:816)
+        ... 3 more
+Caused by: java.net.BindException: Address already in use (Bind failed)
+        at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+        at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+        at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+        at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+        at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+        at java.rmi/sun.rmi.transport.tcp.TCPDirectSocketFactory.createServerSocket(TCPDirectSocketFactory.java:45)
+        at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:670)
+        at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:324)
+        ... 12 more
+root@kafka1:/usr/local/kafka# bin/kafka-console-producer.sh --broker-list localhost:9092 --topic testTopic1
+Error: JMX connector server communication error: service:jmx:rmi://kafka1:9999
+jdk.internal.agent.AgentConfigurationError: java.rmi.server.ExportException: Port already in use: 9999; nested exception is:
+        java.net.BindException: Address already in use (Bind failed)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap.exportMBeanServer(ConnectorBootstrap.java:820)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap.startRemoteConnectorServer(ConnectorBootstrap.java:479)
+        at jdk.management.agent/jdk.internal.agent.Agent.startAgent(Agent.java:447)
+        at jdk.management.agent/jdk.internal.agent.Agent.startAgent(Agent.java:599)
+Caused by: java.rmi.server.ExportException: Port already in use: 9999; nested exception is:
+        java.net.BindException: Address already in use (Bind failed)
+        at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:335)
+        at java.rmi/sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:243)
+        at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:412)
+        at java.rmi/sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
+        at java.rmi/sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:234)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap$PermanentExporter.exportObject(ConnectorBootstrap.java:203)
+        at java.management.rmi/javax.management.remote.rmi.RMIJRMPServerImpl.export(RMIJRMPServerImpl.java:153)
+        at java.management.rmi/javax.management.remote.rmi.RMIJRMPServerImpl.export(RMIJRMPServerImpl.java:138)
+        at java.management.rmi/javax.management.remote.rmi.RMIConnectorServer.start(RMIConnectorServer.java:473)
+        at jdk.management.agent/sun.management.jmxremote.ConnectorBootstrap.exportMBeanServer(ConnectorBootstrap.java:816)
+        ... 3 more
+Caused by: java.net.BindException: Address already in use (Bind failed)
+        at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+        at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+        at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+        at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+        at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+        at java.rmi/sun.rmi.transport.tcp.TCPDirectSocketFactory.createServerSocket(TCPDirectSocketFactory.java:45)
+        at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:670)
+        at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:324)
+        ... 12 more
