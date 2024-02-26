@@ -1,4 +1,4 @@
-2024-02-26 16:58:51,917 - [ERROR] k.m.a.c.BrokerViewCacheActor - Failed to get broker topic segment metrics for BrokerIdentity(0,192.168.178.144,9999,false,true,Map(PLAINTEXT -> 9092),List(),-1)
+2024-02-26 19:03:44,670 - [ERROR] k.m.a.c.BrokerViewCacheActor - Failed to get broker topic segment metrics for BrokerIdentity(0,192.168.178.144,9999,false,true,Map(PLAINTEXT -> 9092),List(),-1)
 java.rmi.NoSuchObjectException: no such object in table
         at java.rmi/sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:303)
         at java.rmi/sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:279)
@@ -10,20 +10,7 @@ java.rmi.NoSuchObjectException: no such object in table
         at kafka.manager.jmx.KafkaJMX$.doWithConnection(KafkaJMX.scala:57)
         at kafka.manager.actor.cluster.BrokerViewCacheActor.$anonfun$updateBrokerTopicPartitionsSize$3(BrokerViewCacheActor.scala:383)
         at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-2024-02-26 16:58:51,970 - [ERROR] k.m.j.KafkaJMX$ - Failed to connect to service:jmx:rmi:///jndi/rmi://192.168.178.146:9999/jmxrmi
-java.rmi.NoSuchObjectException: no such object in table
-        at java.rmi/sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:303)
-        at java.rmi/sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:279)
-        at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
-        at java.management.rmi/javax.management.remote.rmi.RMIServerImpl_Stub.newClient(Unknown Source)
-        at java.management.rmi/javax.management.remote.rmi.RMIConnector.getConnection(RMIConnector.java:2105)
-        at java.management.rmi/javax.management.remote.rmi.RMIConnector.connect(RMIConnector.java:321)
-        at java.management/javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
-        at kafka.manager.jmx.KafkaJMX$.doWithConnection(KafkaJMX.scala:57)
-        at kafka.manager.actor.cluster.BrokerViewCacheActor.$anonfun$updateBrokerTopicPartitionsSize$3(BrokerViewCacheActor.scala:383)
-        at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-2024-02-26 16:58:51,972 - [ERROR] k.m.a.c.BrokerViewCacheActor - Failed to get broker topic segment metrics for BrokerIdentity(2,192.168.178.146,9999,false,true,Map(PLAINTEXT -> 9092),List(),-1)
-java.rmi.NoSuchObjectException: no such object in table
+
 
 
 
