@@ -60,3 +60,19 @@ Caused by: java.net.BindException: Address already in use (Bind failed)
         at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:670)
         at java.rmi/sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:324)
         ... 12 more
+
+
+
+
+
+
+
+# server.properties
+...
+# JMX settings
+confluent.support.metrics.enable=true
+confluent.metrics.reporter.bootstrap.servers=localhost:9092
+confluent.metrics.reporter.topic.replicas=1
+# Set JMX port to an available port, e.g., 10001
+confluent.metrics.reporter.jmx.port=10001
+...
