@@ -24,3 +24,33 @@ java.rmi.NoSuchObjectException: no such object in table
         at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
 2024-02-26 16:58:51,972 - [ERROR] k.m.a.c.BrokerViewCacheActor - Failed to get broker topic segment metrics for BrokerIdentity(2,192.168.178.146,9999,false,true,Map(PLAINTEXT -> 9092),List(),-1)
 java.rmi.NoSuchObjectException: no such object in table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ [ERROR] k.m.a.c.BrokerViewCacheActor - Failed to get broker topic segment metrics for BrokerIdentity(0,192.168.178.144,9999,false,true,Map(PLAINTEXT -> 9092),List(),-1)
+java.rmi.ConnectException: Connection refused to host: 127.0.1.1; nested exception is:
+        java.net.ConnectException: Connection refused (Connection refused)
+        at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+        at java.rmi/sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:209)
+        at java.rmi/sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:196)
+        at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+        at java.management.rmi/javax.management.remote.rmi.RMIServerImpl_Stub.newClient(Unknown Source)
+        at java.management.rmi/javax.management.remote.rmi.RMIConnector.getConnection(RMIConnector.java:2105)
+        at java.management.rmi/javax.management.remote.rmi.RMIConnector.connect(RMIConnector.java:321)
+        at java.management/javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+        at kafka.manager.jmx.KafkaJMX$.doWithConnection(KafkaJMX.scala:57)
+        at kafka.manager.actor.cluster.BrokerViewCacheActor.$anonfun$updateBrokerTopicPartitionsSize$3(BrokerViewCacheActor.scala:383)
