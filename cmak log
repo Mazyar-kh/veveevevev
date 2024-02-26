@@ -54,3 +54,29 @@ java.rmi.ConnectException: Connection refused to host: 127.0.1.1; nested excepti
         at java.management/javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
         at kafka.manager.jmx.KafkaJMX$.doWithConnection(KafkaJMX.scala:57)
         at kafka.manager.actor.cluster.BrokerViewCacheActor.$anonfun$updateBrokerTopicPartitionsSize$3(BrokerViewCacheActor.scala:383)
+
+
+
+
+
+
+
+
+
+=============
+
+
+× kafka.service - Apache Kafka Server
+     Loaded: loaded (/etc/systemd/system/kafka.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2024-02-26 18:12:34 UTC; 1s ago
+       Docs: http://kafka.apache.org/documentation.html
+    Process: 32509 ExecStart=/usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties (code=exited, status=1/FAILURE)
+   Main PID: 32509 (code=exited, status=1/FAILURE)
+        CPU: 950ms
+
+Feb 26 18:12:33 kafka1 systemd[1]: Started Apache Kafka Server.
+Feb 26 18:12:34 kafka1 kafka-server-start.sh[32509]: Unrecognized option: -name
+Feb 26 18:12:34 kafka1 kafka-server-start.sh[32509]: Error: Could not create the Java Virtual Machine.
+Feb 26 18:12:34 kafka1 kafka-server-start.sh[32509]: Error: A fatal exception has occurred. Program will exit.
+Feb 26 18:12:34 kafka1 systemd[1]: kafka.service: Main process exited, code=exited, status=1/FAILURE
+Feb 26 18:12:34 kafka1 systemd[1]: kafka.service: Failed with result 'exit-code'.
