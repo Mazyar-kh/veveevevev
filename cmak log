@@ -13,6 +13,7 @@ java.rmi.NoSuchObjectException: no such object in table
 
 
 
+alias({_name_="kafka_server-topicmetrics...",instance="192 168 178.122",topic="gg"}, "$instance - $topic")
 
 
 
